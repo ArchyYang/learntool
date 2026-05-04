@@ -1,0 +1,42 @@
+{
+  "name": "learntool",
+  "version": "0.1.0",
+  "description": "Self-learning memory layer for AI coding tools — hooks and MCP share one core pipeline",
+  "type": "module",
+  "main": "./dist/cli/index.js",
+  "bin": {
+    "learntool": "./dist/cli/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/core/types.d.ts",
+      "import": "./dist/core/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "zod": "^3.23.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "keywords": ["ai", "learning", "memory", "hooks", "mcp", "claude", "codex"],
+  "license": "MIT"
+}
